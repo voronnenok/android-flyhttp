@@ -1,0 +1,3 @@
+[submodule "flyhttp"]
+	path = flyhttp
+	url = https://github.com/voronnenok/flyhttp.git
