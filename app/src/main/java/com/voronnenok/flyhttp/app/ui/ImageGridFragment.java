@@ -23,6 +23,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,14 +74,16 @@ public class ImageGridFragment extends Fragment{
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        final View v = inflater.inflate(R.layout.activity_main, container, false);
+        final View v = inflater.inflate(R.layout.image_grid_fragment, container, false);
         final RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.my_recycler_view);
         recyclerView.setHasFixedSize(true);
         layoutManager = new GridLayoutManager(getActivity(), 3);
         recyclerView.setLayoutManager(layoutManager);
         final RecyclerView.Adapter mAdapter = new RecycleAdapter(getActivity());
         recyclerView.setAdapter(mAdapter);
-
+//        Toolbar toolbar = (Toolbar)v.findViewById(R.id.toolbar);
+//        toolbar.setTitle("Gallery");
+//        setSupportActionBar(toolbar);
 
         // This listener is used to get the final width of the GridView and then calculate the
         // number of columns and the width of each column. The width of each column is variable

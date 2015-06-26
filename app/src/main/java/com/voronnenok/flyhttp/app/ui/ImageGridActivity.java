@@ -18,7 +18,10 @@ package com.voronnenok.flyhttp.app.ui;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.Toolbar;
+
 import com.voronnenok.flyhttp.app.BuildConfig;
+import com.voronnenok.flyhttp.app.R;
 import com.voronnenok.flyhttp.cache.Utils;
 
 
@@ -33,11 +36,18 @@ public class ImageGridActivity extends BaseActivity {
         if (BuildConfig.DEBUG) {
             Utils.enableStrictMode();
         }
+
         super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.image_grid_activity);
+
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        toolbar.setTitle("Gallery");
+        setSupportActionBar(toolbar);
 
         if (getSupportFragmentManager().findFragmentByTag(TAG) == null) {
             final FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.add(android.R.id.content, new ImageGridFragment(), TAG);
+            ft.add(R.id.content, new ImageGridFragment(), TAG);
             ft.commit();
         }
     }

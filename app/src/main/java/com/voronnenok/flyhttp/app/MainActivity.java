@@ -4,10 +4,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
-
-import com.voronnenok.flyhttp.ImageLoader;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -15,7 +11,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.image_grid_fragment);
 //        ImageView imageView = (ImageView)findViewById(R.id.imageView);
 //        ImageLoader imageLoader = ((FlyApplication) getApplication()).getImageLoader();
 //        imageLoader.loadImage(imageView, "http://www.ihdwallpaperx.com/wp-content/uploads/2015/02/nature-spring-flowers-landscapes-trees-sky-landscape-background-images.jpg");
